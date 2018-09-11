@@ -1,0 +1,13 @@
+h1{
+
+  text-align: center;
+  font-family:  cursive;
+}
+cursor{
+
+  image: https://openclipart.org/image/2400px/svg_to_png/168253/1329309424.png;
+}
+img:hover {
+
+  cursor:crosshair;
+}
