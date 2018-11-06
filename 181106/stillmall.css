@@ -1,0 +1,52 @@
+.all{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightblue;
+  padding: 5px;
+}
+
+.links{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ background-color: lightgreen;
+ padding: 5px;
+ flex: 0 0 auto;
+}
+
+.main{
+ display: flex;
+ flex-direction: column;
+ background-color: lightyellow;
+ padding: 10px;
+ flex: 1 0 70%;
+}
+
+.right{
+  display: flex;
+ justify-content: space-around;
+ align-items: center;
+ background-color: brown;
+ padding: 5px;
+ flex: 20% 0 auto;
+}
+header, footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  padding: 5px;
+  font-size: 30px;
+  font-style: italic;
+}
+div{
+  padding: 10px;
+}
