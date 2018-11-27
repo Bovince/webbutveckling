@@ -4,6 +4,45 @@
   flex-direction: column;
 }
 
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: blue;
+  padding: 5px;
+  flex: auto;
+}
+
+.dropdown{
+  display: inline-block;
+  background-color: green;
+  min-width: @media screen;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+}
+
+.dropdown:hover{
+  background-color: darkgreen;
+}
+
+.dropdown:hover .dropdown-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content a{
+  display: block;
+  color: black;
+  background-color: lightgrey;
+}
+
+
+
 .row{
   display: flex;
   flex-direction: row;
