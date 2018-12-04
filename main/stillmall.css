@@ -14,9 +14,10 @@
 }
 
 .dropdown{
-  display: inline-block;
+  display: block;
   background-color: green;
-  min-width: @media screen;
+  width: auto;
+  height: auto;
 }
 
 .dropdown-content{
@@ -24,6 +25,7 @@
   position: absolute;
   background-color: white;
   min-width: 100px;
+  padding: 0px;
 }
 
 .dropdown:hover{
@@ -33,15 +35,23 @@
 .dropdown:hover .dropdown-content{
   display: flex;
   flex-direction: column;
+  min-width: 100px;
+  height: auto;
+  
+
 }
 
 .dropdown-content a{
   display: block;
   color: black;
   background-color: lightgrey;
+  padding: 5px;
+
 }
 
-
+.dropdown-content a:hover{
+  background-color: grey;
+}
 
 .row{
   display: flex;
