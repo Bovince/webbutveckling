@@ -8,15 +8,14 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: blue;
+  background-color: grey;
   padding: 5px;
   flex: auto;
 }
 
 .dropdown{
   display: block;
-  background-color: green;
-  width: auto;
+  background-color: white;
   height: auto;
 }
 
@@ -24,12 +23,12 @@
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 100px;
-  padding: 0px;
+  padding: 5px;
+
 }
 
-.dropdown:hover{
-  background-color: darkgreen;
+.dropdown:hover div{
+  background-color: lightgrey;
 }
 
 .dropdown:hover .dropdown-content{
@@ -37,16 +36,16 @@
   flex-direction: column;
   min-width: 100px;
   height: auto;
-  
+  align-items: stretch;
 
 }
 
 .dropdown-content a{
-  display: block;
+  display: flex;
   color: black;
   background-color: lightgrey;
   padding: 5px;
-
+  align-items: center;
 }
 
 .dropdown-content a:hover{
@@ -84,7 +83,7 @@
  justify-content: space-around;
  align-items: center;
  justify-content: center;
- background-color: brown;
+ background-color:red;
  padding: 5px;
  flex: 20% 0 auto;
 }
