@@ -1,23 +1,41 @@
-
-
-
+html{
+	height: 100%;
+}
 
 body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
+	width: 100%;
+	height: 100%;
 }
 
 h1{
 	margin: 0px;
-	padding: 0px;
+	padding: 20px;
+	font-size: 50px;
+	color: #8A0000;
+	text-shadow: 3px 2px black;
+	font-family: serif;
 }
 
-button{
-	opacity: 0.5;
-	font-size: 40px;
-
+input{
+	opacity: 0.8;
+	font-size: 30px;
+	width: 50%;
+	border: 2px solid black;
 }
+
+.Mitten{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 
 img{
 	position: absolute;
