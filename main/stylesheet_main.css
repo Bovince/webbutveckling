@@ -26,28 +26,8 @@ input{
   height: 40px;
   width: 80px;
   font-size: 15px;
+  border-radius: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -146,12 +126,15 @@ header, footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
   padding: 10px;
-
-  font-size: 30px;
+  color: #8A0000;
+  text-shadow: 2px 1px black;
+  font-size: 40px;
+  font-weight: bold;
   font-style: italic;
 }
+
+
 div{
   padding: 0px;
 
