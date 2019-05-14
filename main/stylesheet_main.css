@@ -12,6 +12,10 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.all *{
+  margin: 5px;
+}
+
 
 .utility{
   display: flex;
@@ -28,7 +32,36 @@ input{
   font-size: 15px;
   border-radius: 12px;
 }
+.button_menu{
+  cursor: pointer;
+  display: inline-block;
+}
 
+.line_1, .line_2, .line_3 {
+  width: 35px;
+  height: 5px;
+  background-color: #980000;
+  margin: 6.2px 0;
+  transition: 0.4s;
+}
+
+.change .line_1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  width: 35px;
+}
+
+.change .line_2 {
+  opacity: 0;
+}
+
+.change .line_3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  width: 35px;
+}
+
+.menu 
 
 
 .nav{
@@ -36,7 +69,7 @@ input{
   flex-direction: row;
   justify-content: center;
   background-color: grey;
-  padding: 5px;
+  padding: 0px;
   flex: auto;
 }
 
@@ -44,6 +77,9 @@ input{
   display: block;
   padding: 0px;
   background-color: white;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .dropdown div{
@@ -99,8 +135,8 @@ input{
  align-items: center;
  background-color: grey;
  padding: 10px;
-
- flex: 0 0 auto;
+ border: 4px solid black;
+ flex: 0 1 auto;
 }
 
 .main{
@@ -108,8 +144,8 @@ input{
  flex-direction: column;
  background-color: #980000;
  padding: 10px;
-
- flex: 1 0 auto;
+ border: 4px solid black;
+ flex: 1 2 auto;
 
 }
 
@@ -120,7 +156,8 @@ input{
  justify-content: center;
  background-color: grey;
  padding: 5px;
- flex: 20% 0 auto;
+ flex: 20% 1 auto;
+ border: 4px solid black;
 }
 header, footer{
   display: flex;
@@ -140,8 +177,6 @@ div{
 
 }
 
-
-
 img{
   position: absolute;
   height: 100%;
@@ -156,15 +191,11 @@ img{
 }
 
 
-.all *{
-  margin: 5px;
 
-}
 
 .all .row .right div h3{
   color: #980000;
 }
-
 
 
 @media screen and (max-width: 1000px)
