@@ -21,6 +21,10 @@ body{
   width: 100%;
 	height: 100%;
 }
+.all *{
+  margin: 5px;
+
+}
 img{
 	position: absolute;
 	height: 100%;
@@ -44,10 +48,34 @@ input{
   font-size: 15px;
   border-radius: 12px;
 }
+.button_menu{
+  cursor: pointer;
+  display: inline-block;
+}
+
+.line_1, .line_2, .line_3 {
+  width: 35px;
+  height: 5px;
+  background-color: #980000;
+  margin: 6.2px 0;
+  transition: 0.4s;
+}
+
+.change .line_1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  width: 35px;
+}
+
+.change .line_2 {
+  opacity: 0;
+}
+
+.change .line_3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  width: 35px;
+}
 #bild{
   margin: 0px;
-}
-.all *{
-  margin: 5px;
-
 }

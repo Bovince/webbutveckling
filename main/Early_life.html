@@ -9,6 +9,10 @@
 		function Redirect(){
 			window.location = 'Main_page.html';
 		}
+    function make_cross(x){
+      x.classList.toggle("change");
+      x.classList.toggle("menu");
+    }
 		</script>
   </head>
   <body>
@@ -16,7 +20,11 @@
       <img id="bild" src="5576299-architecture-wallpaper.jpg" alt="Background"></img>
       <div class="utility">
         <input type="button" value="Return" onclick="Redirect()"/>
-        
+        <div class="button_menu" onclick="make_cross(this)">
+          <div class="line_1"></div>
+          <div class="line_2"></div>
+          <div class="line_3"></div>
+        </div>
       </div>
 
   </body>

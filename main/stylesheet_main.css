@@ -60,9 +60,16 @@ input{
   transform: rotate(45deg) translate(-8px, -8px);
   width: 35px;
 }
-
-.menu 
-
+.menu{
+  display: none;
+  position: absolute;
+  height: auto;
+  width: auto;
+  background-color: white;
+}
+.show .menu{
+  display: block;
+}
 
 .nav{
   display: flex;
@@ -70,16 +77,19 @@ input{
   justify-content: center;
   background-color: grey;
   padding: 0px;
-  flex: auto;
+
 }
 
 .dropdown{
-  display: block;
+  display: inline-block;
   padding: 0px;
   background-color: white;
   margin: 0px;
-  width: 100%;
   height: 100%;
+  border: 4px solid black;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .dropdown div{
@@ -90,19 +100,19 @@ input{
   display: none;
   position: absolute;
   background-color: white;
-  transform: translateY(-10px);
+}
+.dropdown:hover{
+  background-color: lightgrey;
 }
 
 .dropdown:hover div{
   background-color: lightgrey;
-
 }
 
 .dropdown:hover .dropdown-content{
   display: flex;
   flex-direction: column;
-
-  height: auto;
+  margin: 0px;
   align-items: stretch;
 }
 
@@ -151,7 +161,7 @@ input{
 
 .right{
  display: flex;
- justify-content: space-around;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
  background-color: grey;
@@ -159,6 +169,7 @@ input{
  flex: 20% 1 auto;
  border: 4px solid black;
 }
+
 header, footer{
   display: flex;
   align-items: center;
