@@ -10,27 +10,49 @@
 		function Redirect(){
 			window.location = 'Start_page';
 		}
-    function make_cross(x){
+    function make_cross(){
+      var x=document.getElementById("cross");
+      var y=document.getElementById("menu_box");
+      //alert(y.id);
       x.classList.toggle("change");
-      x.classList.toggle("show");
+      y.classList.toggle("change");
     }
+    function colors(color){
+
+    }
+
+
 		</script>
 
   </head>
   <body>
     <div class="all">
       <img id="bild" src="5576299-architecture-wallpaper.jpg" alt="Background"></img>
-      <div class="menu"> bruhhh</div>
       <div class="utility">
         <input type="button" value="Return" onclick="Redirect()"/>
-        <div class="button_menu" onclick="make_cross(this)">
+        <div id="cross" class="button_menu" onclick="make_cross()">
           <div class="line_1"></div>
           <div class="line_2"></div>
           <div class="line_3"></div>
         </div>
-
       </div>
       <header>The Legitimate Webbsite</header>
+      <div id="menu_box" class="menu_box">
+        <table class="menu">
+           <th>Menu</th>
+           <tr>
+             <td class="colors" onclick="">
+               Colors
+             </td>
+           </tr>
+           <tr>
+             <td> Language </td>
+           </tr>
+           <tr>
+             <td onclick="spin()"> Spin </td>
+           </tr>
+        </table>
+      </div>
       <div class="nav">
         <div class="dropdown">
           <div>Biography arcs</div>
@@ -55,11 +77,11 @@
         </div>
         <div class="right">
           <div><h3> Other "interesting" things <h3></div>
-          <div><a href="https://www.instagram.com/bovinvincent/"> My instagram profile <a/></div>
+          <div><a href="https://www.instagram.com/bovinvincent/"> My instagram profile </a></div>
         </div>
       </div>
       <footer> Thanks for shown interest </footer>
 
-    </div>    
+    </div>
   </body>
 </html>
