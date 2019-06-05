@@ -8,7 +8,7 @@
 
     <script>
 		function Redirect(){
-			window.location = 'Start_page';
+			window.location = 'index.html';
 		}
     function make_cross(){
       var x=document.getElementById("cross");
@@ -17,32 +17,88 @@
       x.classList.toggle("change");
       y.classList.toggle("change");
     }
-    function colors(color){
 
+    function show(x){
+      x.classList.toggle("show");
     }
 
+    function red(){
+      document.getElementById("return").style.border="2px solid red";
+
+      document.getElementById("line1").style.background="#980000";
+      document.getElementById("line2").style.background="#980000";
+      document.getElementById("line3").style.background="#980000";
+      document.getElementById("main").style.background="#980000";
+      document.getElementById("right_title").style.color="#8A0000";
+      document.getElementById("header").style.color="#8A0000";
+      document.getElementById("footer").style.color="#8A0000";
+
+      document.getElementById("image_slot").innerHTML="<img id=\"image\" src=\"red_wallpaper.jpg\" alt=\"Background\"></img>";
+    }
+
+    function blue(){
+      document.getElementById("return").style.border="2px solid blue";
+
+      document.getElementById("line1").style.background="#0055ff";
+      document.getElementById("line2").style.background="#0055ff";
+      document.getElementById("line3").style.background="#0055ff";
+      document.getElementById("main").style.background="#0055ff";
+
+      document.getElementById("right_title").style.color="#0044ff";
+      document.getElementById("header").style.color="#0044cc";
+      document.getElementById("footer").style.color="#0044cc";
+
+      document.getElementById("image_slot").innerHTML="<img id=\"image\" src=\"blue_wallpaper.jpg\" alt=\"Background\"></img>";
+    }
+
+    function green(){
+      document.getElementById("return").style.border="2px solid green";
+
+      document.getElementById("line1").style.background="#009900";
+      document.getElementById("line2").style.background="#009900";
+      document.getElementById("line3").style.background="#009900";
+      document.getElementById("main").style.background="#009900";
+
+      document.getElementById("right_title").style.color="#006600";
+      document.getElementById("header").style.color="#006600";
+      document.getElementById("footer").style.color="#006600";
+
+      document.getElementById("image_slot").innerHTML="<img id=\"image\" src=\"green_wallpaper.jpg\" alt=\"Background\"></img>";
+    }
+
+    function spin(){
+      var x=document.getElementById("body");
+      x.classList.toggle("spin");
+    }
 
 		</script>
 
   </head>
-  <body>
-    <div class="all">
-      <img id="bild" src="5576299-architecture-wallpaper.jpg" alt="Background"></img>
+  <body id="body">
+    <span id="image_slot"><img id="image" src="red_wallpaper.jpg" alt="Background"></img></span>
+    <div id="all" class="all">
+     <!--<img id="bild" src=<span id="test2"></spna> alt="Background"></img>-->
+    <!--<span id="test"></span>-->
       <div class="utility">
-        <input type="button" value="Return" onclick="Redirect()"/>
+        <input id="return" type="button" value="Return" onclick="Redirect()"/>
         <div id="cross" class="button_menu" onclick="make_cross()">
-          <div class="line_1"></div>
-          <div class="line_2"></div>
-          <div class="line_3"></div>
+          <div id="line1" class="line_1"></div>
+          <div id="line2" class="line_2"></div>
+          <div id="line3" class="line_3"></div>
         </div>
       </div>
-      <header>The Legitimate Webbsite</header>
+      <header id="header">The Legitimate Webbsite</header>
       <div id="menu_box" class="menu_box">
         <table class="menu">
            <th>Menu</th>
            <tr>
-             <td class="colors" onclick="">
+             <td class="colors" onclick="show(this)">
                Colors
+               <div class="color_select">
+                 <div onclick="red()">Red</div>
+                 <div onclick="blue()">Blue</div>
+                 <div onclick="green()">Green</div>
+               </div>
              </td>
            </tr>
            <tr>
@@ -53,7 +109,7 @@
            </tr>
         </table>
       </div>
-      <div class="nav">
+      <div id="nav" class="nav">
         <div class="dropdown">
           <div>Biography arcs</div>
           <div class="dropdown-content">
@@ -63,24 +119,24 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="links">
+      <div id="row" class="row">
+        <div id="links" class="links">
           <div><a href="https://www.mark.se/marks-gymnasieskola/">  The Gymnasiums Webbsite </a></div>
           <div><a href="https://kunskapenshus.itslearning.com/index.aspx"> Our schoolplatform </a></div>
           <div><a href="https://sv.wikipedia.org/wiki/Marks_gymnasieskola"> The schools wikipedia site </a></div>
         </div>
-        <div class="main">
+        <div id="main" class="main">
           <div><h3> Here the story of my life is suppossed to be writen,
           but I have not gotten around to doing that yet, so bare with me. </h3></div>
           <div><h3> That is all have a good day! </h3></div>
           <div><h3> PS. subscribe to Pewdiepie!!! </h3></div>
         </div>
-        <div class="right">
-          <div><h3> Other "interesting" things <h3></div>
+        <div id="right" class="right">
+          <div><h3 id="right_title"> Other "interesting" things <h3></div>
           <div><a href="https://www.instagram.com/bovinvincent/"> My instagram profile </a></div>
         </div>
       </div>
-      <footer> Thanks for shown interest </footer>
+      <footer id="footer"> Thanks for shown interest </footer>
 
     </div>
   </body>

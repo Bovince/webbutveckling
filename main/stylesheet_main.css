@@ -5,6 +5,25 @@ body{
   overflow: hidden;
 }
 
+.spin body{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+span{
+  display: flex;
+
+}
+
 .all{
   display: flex;
   flex-direction: column;
@@ -40,7 +59,7 @@ input{
   height: 5px;
   background-color: #980000;
   margin: 6.2px 0;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .change .line_1 {
@@ -75,11 +94,35 @@ input{
 
 .change .menu{
   display: block;
+  margin: 0px;
+  padding: 5px;
 }
 
-.colors_decision{
-  
+.colors:hover{
+  cursor: pointer;
+
 }
+
+.color_select{
+  display: none;
+  padding: 5px;
+}
+.color_select div{
+  height: 20px;
+  margin: 0px;
+
+}
+
+.show .color_select{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 75px;
+  top: 19px;
+  background-color: white;
+
+}
+
 
 
 
@@ -208,7 +251,7 @@ img{
 }
 
 .all .row .right div h3{
-  color: #980000;
+  color: #8A0000;
 }
 
 @media screen and (max-width: 1000px)
